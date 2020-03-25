@@ -81,34 +81,33 @@ List<Location> result = await Covid19Tracker.GetAllCountriesDataAsync();
 ```csharp
 public class Latest
 {
-	/// Gets or sets the total of confirmed cases.
-	public long Confirmed { get; set; }
-
-	/// Gets or sets the total of deaths.
-	public long Deaths { get; set; }
+    // Gets or sets the total of confirmed cases.
+    public long Confirmed { get; set; }
+    
+    // Gets or sets the total of deaths.
+    public long Deaths { get; set; }
 }
 ```
 
 ```csharp
 public class Location
 {
-	// Gets or sets the coordinates.
-	public Coordinates Coordinates { get; set; }
-	
-	// Gets or sets the country name.
-	public string Country { get; set; }
-	
-	// Gets or sets the country Code.
-	public string CountryCode { get; set; }
-	
-	// Gets or sets the last updated date.
-	public DateTime LastUpdated { get; set; }
-	
-	// Gets or sets the latest data about the location.
-	public Latest Latest { get; set; }
-	
-	// Gets or sets the province.
-	public string Province { get; set; }
+    // Gets or sets the coordinates.
+    public Coordinates Coordinates { get; set; }
+    
+    // Gets or sets the country name.
+    public string Country { get; set; }
+    
+    // Gets or sets the country Code.
+    public string CountryCode { get; set; }
+    
+    // Gets or sets the last updated date.
+    public DateTime LastUpdated { get; set; }
+    
+    // Gets or sets the latest data about the location.
+    
+    // Gets or sets the province.
+    public string Province { get; set; }
 }
 ```
 
