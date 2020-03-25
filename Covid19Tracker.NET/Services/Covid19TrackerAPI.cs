@@ -42,7 +42,7 @@ namespace Covid19Tracker.Services
         }
 
         /// <summary>
-        /// Get Coivid-19 data related to a specific country.
+        /// Get latest related to a specific country based on the country code.
         /// </summary>
         /// <param name="countryCode">The country code.</param>
         /// <returns>Total confirmed cases and deaths in the country.</returns>
@@ -64,8 +64,8 @@ namespace Covid19Tracker.Services
         }
 
         /// <summary>
-        /// Gets the Location(Longitude and Latitude), the latest
-        /// data about the country and the last updated date based on the country code.
+        /// Gets the Coordinates(Longitude and Latitude), the latest data about the
+        /// country and the last updated date based on the country code.
         /// </summary>
         /// <param name="countryCode">The country code.</param>
         /// <returns>The Location of the country, his latest covid-19 data and the last updated date.</returns>
@@ -88,7 +88,7 @@ namespace Covid19Tracker.Services
         }
 
         /// <summary>
-        /// Get Coivid-19 data related to a specific country.
+        /// Get latest related to a specific country based on the country name.
         /// </summary>
         /// <param name="countryName">The country name.</param>
         /// <returns>Total confirmed cases and deaths in the country.</returns>
@@ -114,8 +114,8 @@ namespace Covid19Tracker.Services
         }
 
         /// <summary>
-        /// Gets the Location(Longitude and Latitude), the latest
-        /// data about the country and the last updated date based on the country name.
+        /// Gets the Coordinates(Longitude and Latitude), the latest data about the
+        /// country and the last updated date based on the country name.
         /// </summary>
         /// <param name="countryName">The country name.</param>
         /// <returns>The Location of the country, his latest covid-19 data and the last updated date.</returns>
@@ -142,7 +142,7 @@ namespace Covid19Tracker.Services
 
 
         /// <summary>
-        /// Get Data from of all locations in the world.
+        /// Get Data from of all locations in the world (Latest + Locations).
         /// </summary>
         /// <returns>Date from all location.</returns>
         public static async Task<CoronavirusOutbreakData> GetTheWorldCovid19Data()
@@ -162,7 +162,7 @@ namespace Covid19Tracker.Services
 
 
         /// <summary>
-        /// Get all countires data.
+        /// Get all countries data.
         /// </summary>
         /// <returns>A list of Location object(Country, Latest data, ... etc).</returns>
         public static async Task<List<Location>> GetAllCountriesDataAsync()
