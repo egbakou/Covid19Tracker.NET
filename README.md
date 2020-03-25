@@ -54,7 +54,7 @@ Console.WriteLine("Last updated Date: " + location.LastUpdated);
 Latest latest = await Covid19Tracker.GetLatestAboutCountryByNameAsync(string countryName);
 ```
 
--  Gets the Coordinates(Longitude and Latitude), the latest data about the country and the last updated date based on the country code.
+-  Gets the Coordinates(Longitude and Latitude), the latest data about the country and the last updated date based on the country name.
 
 ```csharp
 Location location = await Covid19Tracker.GetLocationWithDataByNameAsync(string countryName);
