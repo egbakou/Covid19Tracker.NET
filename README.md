@@ -115,8 +115,8 @@ public class Location
 ```csharp
 public class CoronavirusOutbreakData
 {
-	// Gets or sets the Latest.
-	public Latest Latest { get; set; }
+    // Gets or sets the Latest.
+    public Latest Latest { get; set; }
     
     // Gets or sets the Locations.
     public List<Location> Locations { get; set; }
