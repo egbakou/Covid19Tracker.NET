@@ -32,7 +32,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\nuget\readme.txt" PackagePath="readme.txt" Pack="true" />
+    <None Include="..\nuget\readme.txt" PackagePath="readme.txt" Pack="true" />
   </ItemGroup>
   
   <ItemGroup>
