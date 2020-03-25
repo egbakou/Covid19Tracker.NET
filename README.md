@@ -27,13 +27,15 @@ Console.WriteLine("Deaths: " + latest.Deaths);
 - Get latest related to a specific country based on the country code.
 
 ```csharp
-Latest latest = await Covid19Tracker.GetLatestAboutCountryByCodeAsync(string countryCode) //country code example: "IT" for Italy
+Latest latest = await Covid19Tracker.GetLatestAboutCountryByCodeAsync(string countryCode);
 ```
+
+> Country code example: "IT" for Italy
 
 - Gets the Coordinates(Longitude and Latitude), the latest data about the country and the last updated date based on the country code.
 
 ```csharp
-Location location = await Covid19Tracker.GetLocationWithDataByCodeAsync(string countryCode); //country code example: "IT" for Italy
+Location location = await Covid19Tracker.GetLocationWithDataByCodeAsync(string countryCode);
 
 // Output
 Console.WriteLine("Country: " + location.Country);
@@ -44,16 +46,18 @@ Console.WriteLine("Deaths: " + location.Latest.Deaths);
 Console.WriteLine("Last updated Date: " + location.LastUpdated);
 ```
 
+> Country code example: "IT" for Italy
+
 -  Get latest related to a specific country based on the country name.
 
 ```csharp
-Latest latest = await Covid19Tracker.GetLatestAboutCountryByNameAsync(string countryName) //country name example: "Italy"
+Latest latest = await Covid19Tracker.GetLatestAboutCountryByNameAsync(string countryName);
 ```
 
 -  Gets the Coordinates(Longitude and Latitude), the latest data about the country and the last updated date based on the country code.
 
 ```csharp
-Location location = await Covid19Tracker.GetLocationWithDataByNameAsync(string countryName); //country name example: "Italy"
+Location location = await Covid19Tracker.GetLocationWithDataByNameAsync(string countryName);
 
 // Output
 Console.WriteLine("Country: " + location.Country);
@@ -63,6 +67,8 @@ Console.WriteLine("Confirmed: " + location.Latest.Confirmed);
 Console.WriteLine("Deaths: " + location.Latest.Deaths);
 Console.WriteLine("Last updated  Date: " + location.LastUpdated);
 ```
+
+> Country name example: "Italy"
 
 - Get Data from of all locations in the world (Latest + Locations).
 
