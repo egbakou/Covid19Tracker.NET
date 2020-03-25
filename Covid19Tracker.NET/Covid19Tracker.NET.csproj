@@ -15,7 +15,7 @@
     <PackageTags> dotnet-standard, covid19-data, covid-19,covid-api, nuget-package
     </PackageTags>
     <Copyright>Copyright 2020</Copyright>
-    <PackageLicenseExpression>GPL</PackageLicenseExpression>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
