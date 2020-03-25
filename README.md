@@ -125,7 +125,7 @@ public class CoronavirusOutbreakData
 
 ## Credits
 
-Thanks to ExpDev07 for developing [coronavirus-tracker-api](https://github.com/ExpDev07/coronavirus-tracker-api).
+Thanks to [@ExpDev07](https://github.com/ExpDev07/) for developing [coronavirus-tracker-api](https://github.com/ExpDev07/coronavirus-tracker-api).
 
 ## Created by: Kodjo Laurent Egbakou
 
