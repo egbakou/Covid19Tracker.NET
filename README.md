@@ -139,7 +139,7 @@ Thanks to [@ExpDev07](https://github.com/ExpDev07/) for developing [coronavirus-
 
 ## License
 
-The MIT License (MIT) see [License file](https://github.com/egbakou/RESTCountries.NET/blob/master/LICENSE)
+The MIT License (MIT) see [License file](https://github.com/egbakou/Covid19Tracker.NET/blob/master/LICENSE)
 
 ## Contribution
 
