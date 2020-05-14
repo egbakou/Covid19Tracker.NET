@@ -4,6 +4,7 @@ CountryData.cs
 Kodjo Laurent Egbakou
 */
 
+using Covid19Tracker.Helpers;
 using Covid19Tracker.Models;
 using Newtonsoft.Json;
 using System;
@@ -11,7 +12,7 @@ using System;
 namespace Covid19TrackerModels
 {
     /// <summary>
-    /// Defines the <see cref="CountryData" />.
+    /// Defines a country data class.
     /// </summary>
     public class CountryData
     {
@@ -19,6 +20,7 @@ namespace Covid19TrackerModels
         /// Gets or sets the Updated.
         /// </summary>
         [JsonProperty("updated")]
+        [JsonConverter(typeof(MicrosecondEpochConverter))]
         public DateTime Updated { get; set; }
 
         /// <summary>

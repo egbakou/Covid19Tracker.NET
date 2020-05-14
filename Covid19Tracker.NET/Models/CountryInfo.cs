@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 namespace Covid19Tracker.Models
 {
     /// <summary>
-    /// Defines the <see cref="CountryInfo" />.
+    /// Defines a country info class.
     /// </summary>
     public class CountryInfo
     {

@@ -4,6 +4,7 @@ Continent.cs
 Kodjo Laurent Egbakou
 */
 
+using Covid19Tracker.Helpers;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using System.Collections.Generic;
 namespace Covid19Tracker.Models
 {
     /// <summary>
-    /// Defines the <see cref="ContinentData" />.
+    /// Defines a continent data class.
     /// </summary>
     public class ContinentData
     {
@@ -19,6 +20,7 @@ namespace Covid19Tracker.Models
         /// Gets or sets the updated.
         /// </summary>
         [JsonProperty("updated")]
+        [JsonConverter(typeof(MicrosecondEpochConverter))]
         public DateTime Updated { get; set; }
 
         /// <summary>
