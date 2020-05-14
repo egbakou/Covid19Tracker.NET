@@ -21,8 +21,26 @@ namespace Covid19Tracker.Services
         /// </summary>
         private static readonly RestClient client = new RestClient(API_BASE_URI);
 
-        
-       
+
+        /// <summary>
+        /// Get All Continents Totals for Actual and Yesterday Data.
+        /// </summary>
+        /// <returns>Total confirmed cases and deaths in the world.</returns>
+        public static async Task<List<ContinentData>> GetContinentsDataAsync()
+        {
+            var request = new RestRequest(
+                $"{CONTINENTS_ENDPOINT}",
+                Method.GET,
+                DataFormat.Json);
+            IRestResponse response = await client.ExecuteGetAsync(request).ConfigureAwait(false);
+            if (response.IsSuccessful && response.StatusCode.HasFlag(HttpStatusCode.OK))
+            {
+                JArray jsonArray = JArray.Parse(response.Content);
+                return jsonArray.ToObject<List<ContinentData>>();
+            }
+            throw new Exception("No data found. Please check if https://disease.sh is avialable.");
+        }
+
 
     }
 }
