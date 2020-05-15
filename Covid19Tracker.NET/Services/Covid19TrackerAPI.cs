@@ -23,9 +23,30 @@ namespace Covid19Tracker.Services
 
 
         /// <summary>
+        /// Get global stats: cases, deaths, recovered, time last updated, and active cases. Data is updated every 10 minutes.
+        /// </summary>
+        /// <returns>Global Totals for Actual and Yesterday Data.</returns>
+        public static async Task<WorlData> GetWorlDataAsync()
+        {
+            var request = new RestRequest(
+                $"{ALL_ENDPOINT}",
+                Method.GET,
+                DataFormat.Json);
+            IRestResponse response = await client.ExecuteGetAsync(request).ConfigureAwait(false);
+            if (response.IsSuccessful && response.StatusCode.HasFlag(HttpStatusCode.OK))
+            {
+                JObject jsonObject = JObject.Parse(response.Content);
+                return jsonObject.ToObject<WorlData>();
+            }
+            throw new Exception("No data found. Please check if https://disease.sh is avialable.");
+        }
+
+
+
+        /// <summary>
         /// Get All Continents Totals for Actual and Yesterday Data.
         /// </summary>
-        /// <returns>Total confirmed cases and deaths in the world.</returns>
+        /// <returns>A List with an element for each continent that has stats available.</returns>
         public static async Task<List<ContinentData>> GetContinentsDataAsync()
         {
             var request = new RestRequest(
