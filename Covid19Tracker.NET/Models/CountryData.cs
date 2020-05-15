@@ -20,7 +20,7 @@ namespace Covid19TrackerModels
         /// Gets or sets the Updated.
         /// </summary>
         [JsonProperty("updated")]
-        [JsonConverter(typeof(MicrosecondEpochConverter))]
+        [JsonConverter(typeof(UTCDateTimeConverter))]
         public DateTime Updated { get; set; }
 
         /// <summary>
