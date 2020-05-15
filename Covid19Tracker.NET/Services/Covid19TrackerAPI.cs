@@ -5,6 +5,7 @@ Kodjo Laurent Egbakou
 */
 
 using Covid19Tracker.Models;
+using Covid19TrackerModels;
 using Newtonsoft.Json.Linq;
 using RestSharp;
 using System;
@@ -21,7 +22,7 @@ namespace Covid19Tracker.Services
     public class Covid19TrackerAPI
     {
         /// <summary>
-        /// Defines a RestClient static object.
+        /// Defines a RestClient static object..
         /// </summary>
         private static readonly RestClient client = new RestClient(API_BASE_URI);
 
@@ -65,9 +66,8 @@ namespace Covid19Tracker.Services
 
         /// <summary>
         /// Get a Specific Continent Totals for Actual and Yesterday Data.
-        /// Get the same data from GetContinentsDataAsync method, but filter down to a specific continent.
         /// </summary>
-        /// <param name="continent">The continent name in english.</param>
+        /// <param name="continent">The continent name (in English)</param>
         /// <returns>The continent data.</returns>
         public static async Task<ContinentData> GetDataByContinentAsync(string continent)
         {
@@ -81,7 +81,49 @@ namespace Covid19Tracker.Services
                 JObject jsonObject = JObject.Parse(response.Content);
                 return jsonObject.ToObject<ContinentData>();
             }
-            throw new Exception("No data matched with the the continent name provided.");
+            throw new Exception("Continent not found or doesn't have any cases");
+        }
+
+        /// <summary>
+        /// Get All Countries Totals for Actual and Yesterday Data.
+        /// </summary>
+        /// <returns>a List with of an element for each country that has stats available. 
+        /// This includes iso codes, lat/long, a link to the country flag, cases, new cases,
+        /// deaths, new deaths, recovered, active cases, critical cases, and cases/deaths
+        /// per one million people. Data is updated every 10 minutes.</returns>
+        public static async Task<List<CountryData>> GetCountriesDataAsync()
+        {
+            var request = new RestRequest(
+                $"{COUNTRIES_ENDPOINT}",
+                Method.GET,
+                DataFormat.Json);
+            IRestResponse response = await client.ExecuteGetAsync(request).ConfigureAwait(false);
+            if (response.IsSuccessful && response.StatusCode.HasFlag(HttpStatusCode.OK))
+            {
+                JArray jsonArray = JArray.Parse(response.Content);
+                return jsonArray.ToObject<List<CountryData>>();
+            }
+            throw new Exception("No data found. Please check if https://disease.sh is avialable.");
+        }
+
+        /// <summary>
+        /// The GetDataByCountriesAsync.
+        /// </summary>
+        /// <param name="country">The country name (in English)</param>
+        /// <returns>Country data.</returns>
+        public static async Task<CountryData> GetDataByCountryAsync(string country)
+        {
+            var request = new RestRequest(
+                $"{COUNTRIES_ENDPOINT}/{country}",
+                Method.GET,
+                DataFormat.Json);
+            IRestResponse response = await client.ExecuteGetAsync(request).ConfigureAwait(false);
+            if (response.IsSuccessful && response.StatusCode.HasFlag(HttpStatusCode.OK))
+            {
+                JObject jsonObject = JObject.Parse(response.Content);
+                return jsonObject.ToObject<CountryData>();
+            }
+            throw new Exception("Country not found or doesn't have any cases");
         }
     }
 }
