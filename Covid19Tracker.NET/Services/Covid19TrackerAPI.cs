@@ -107,10 +107,10 @@ namespace Covid19Tracker.Services
         }
 
         /// <summary>
-        /// The GetDataByCountriesAsync.
+        /// Get a Specific Country's Totals for Actual and Yesterday Data.s
         /// </summary>
         /// <param name="country">The country name (in English)</param>
-        /// <returns>Country data.</returns>
+        /// <returns>Country data</returns>
         public static async Task<CountryData> GetDataByCountryAsync(string country)
         {
             var request = new RestRequest(
