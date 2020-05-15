@@ -1,10 +1,14 @@
-﻿using Covid19Tracker.Models;
-using Newtonsoft.Json;
+﻿/*
+Covid19TrackerAPI.cs
+15/05/2020 00:50:48
+Kodjo Laurent Egbakou
+*/
+
+using Covid19Tracker.Models;
 using Newtonsoft.Json.Linq;
 using RestSharp;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using static Covid19Tracker.Constants.APIResources;
@@ -17,10 +21,9 @@ namespace Covid19Tracker.Services
     public class Covid19TrackerAPI
     {
         /// <summary>
-        /// Defines a RestClient static object
+        /// Defines a RestClient static object.
         /// </summary>
         private static readonly RestClient client = new RestClient(API_BASE_URI);
-
 
         /// <summary>
         /// Get global stats: cases, deaths, recovered, time last updated, and active cases. Data is updated every 10 minutes.
@@ -41,8 +44,6 @@ namespace Covid19Tracker.Services
             throw new Exception("No data found. Please check if https://disease.sh is avialable.");
         }
 
-
-
         /// <summary>
         /// Get All Continents Totals for Actual and Yesterday Data.
         /// </summary>
@@ -62,6 +63,25 @@ namespace Covid19Tracker.Services
             throw new Exception("No data found. Please check if https://disease.sh is avialable.");
         }
 
-
+        /// <summary>
+        /// Get a Specific Continent Totals for Actual and Yesterday Data.
+        /// Get the same data from GetContinentsDataAsync method, but filter down to a specific continent.
+        /// </summary>
+        /// <param name="continent">The continent name in english.</param>
+        /// <returns>The continent data.</returns>
+        public static async Task<ContinentData> GetDataByContinentAsync(string continent)
+        {
+            var request = new RestRequest(
+                $"{CONTINENTS_ENDPOINT}/{continent}",
+                Method.GET,
+                DataFormat.Json);
+            IRestResponse response = await client.ExecuteGetAsync(request).ConfigureAwait(false);
+            if (response.IsSuccessful && response.StatusCode.HasFlag(HttpStatusCode.OK))
+            {
+                JObject jsonObject = JObject.Parse(response.Content);
+                return jsonObject.ToObject<ContinentData>();
+            }
+            throw new Exception("No data matched with the the continent name provided.");
+        }
     }
 }
