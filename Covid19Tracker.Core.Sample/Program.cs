@@ -9,7 +9,12 @@ namespace Covid19Tracker.Core.Sample
     {
         static async Task Main(string[] args)
         {
-            var result1 = await GetCountriesDataAsync();
+            long unixDate = 1589495874828;
+            DateTime start = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+            DateTime date = start.AddMilliseconds(unixDate).ToLocalTime();
+            Console.WriteLine(date.ToShortDateString());
+
+            var result1 = await GetContinentsDataAsync();
             Console.WriteLine(result1.Count);
             Console.ReadLine();
 
