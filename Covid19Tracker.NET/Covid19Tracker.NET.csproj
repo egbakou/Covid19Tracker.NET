@@ -9,7 +9,7 @@
     <Description>.NET wrapper library around the API provided by @NovelCovid https://github.com/NovelCovid/APIi for tracking the global coronavirus (COVID-19, SARS-CoV-2) outbreak.</Description>
     <PackageProjectUrl>https://github.com/egbakou/Covid19Tracker.NET</PackageProjectUrl>
     <RepositoryUrl>https://github.com/egbakou/Covid19Tracker.NET</RepositoryUrl>
-    <PackageIcon>https://raw.githubusercontent.com/egbakou/logos/master/Covid19Tracker.NET/covid-19_4.png?raw=true</PackageIcon>
+    <PackageIconUrl>https://raw.githubusercontent.com/egbakou/logos/master/Covid19Tracker.NET/covid-19_4.png?raw=true</PackageIconUrl>
     <Version>2.0</Version>
     <PackageReleaseNotes>See: https://github.com/egbakou/Covid19Tracker.NET </PackageReleaseNotes>
     <PackageTags> dotnet-standard, covid19-tracker covid19-data, covid-19,covid-api, nuget-package
