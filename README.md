@@ -1,10 +1,12 @@
 
 
-# <img src="art/icon.png" alt="Icon" width="60" />Covid19Tracker.NET 
+# <img src="art/icon.png" alt="Icon" width="60" />Covid19Tracker.NET  V2.0
 
 This is a .NET wrapper library around the API provided by [@NovelCovid](https://github.com/NovelCovid/) https://github.com/NovelCovid/API for tracking the global coronavirus (COVID-19, SARS-CoV-2) outbreak. 
 
 It provides up-to-date data about Coronavirus outbreak includes numbers about confirmed cases, recovered, deaths, today cases, today deaths, tests and more.
+
+The version 1.0.0 doc is [here](https://github.com/egbakou/Covid19Tracker.NET/blob/master/Docs/V1.0.0README.md)
 
 ## Setup
 
@@ -166,10 +168,6 @@ public class ContientData
     public string Continent { get; set; }
 }
 ```
-
-## Credits
-
-Thanks to [@ExpDev07](https://github.com/ExpDev07/) for developing [coronavirus-tracker-api](https://github.com/ExpDev07/coronavirus-tracker-api).
 
 ## Created by: Kodjo Laurent Egbakou
 
