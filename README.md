@@ -1,8 +1,10 @@
+
+
 # <img src="art/icon.png" alt="Icon" width="60" />Covid19Tracker.NET 
 
-This is a .NET wrapper library around the API provided by [@ExpDev07](https://github.com/ExpDev07/) https://github.com/ExpDev07/coronavirus-tracker-api for tracking the global coronavirus (COVID-19, SARS-CoV-2) outbreak. 
+This is a .NET wrapper library around the API provided by [@NovelCovid](https://github.com/NovelCovid/) https://github.com/NovelCovid/API for tracking the global coronavirus (COVID-19, SARS-CoV-2) outbreak. 
 
-It provides up-to-date data about Coronavirus outbreak includes numbers about confirmed cases, and deaths.
+It provides up-to-date data about Coronavirus outbreak includes numbers about confirmed cases, recovered, deaths, today cases, today deaths, tests and more.
 
 ## Setup
 
@@ -15,116 +17,153 @@ Add `namespace` `Covid19Tracker.Services` and call `Covid19TrackerAPI` class to 
 
 ## Usage
 
-- Get latest about total confirmed cases and deaths in the world.
+- Gets global stats: cases, deaths, recovered, time last updated, and active cases. Data is updated every 10 minutes.
 
 ```csharp
-Latest latest = await Covid19Tracker.GetLatestAsync();
-// Output
-Console.WriteLine("Confirmed: " + latest.Confirmed);
-Console.WriteLine("Deaths: " + latest.Deaths);
+WorlData data = await Covid19Tracker.GetLatestAsync();
 ```
 
-- Get latest related to a specific country based on the country code.
+-  Gets All Continent's Totals
 
 ```csharp
-Latest latest = await Covid19Tracker.GetLatestAboutCountryByCodeAsync(string countryCode);
+List<ContinentData> data = await Covid19Tracker.GetContinentsDataAsync();
 ```
 
-> Country code example: "IT" for Italy
-
-- Gets the Coordinates(Longitude and Latitude), the latest data about the country and the last updated date based on the country code.
+- Gets a Specific Continent Totals.
 
 ```csharp
-Location location = await Covid19Tracker.GetLocationWithDataByCodeAsync(string countryCode);
-
-// Output
-Console.WriteLine("Country: " + location.Country);
-Console.WriteLine("Longitude: " + location.Longitude);
-Console.WriteLine("Latitude: " + location.Latitude.);
-Console.WriteLine("Confirmed: " + location.Latest.Confirmed);
-Console.WriteLine("Deaths: " + location.Latest.Deaths);
-Console.WriteLine("Last updated Date: " + location.LastUpdated);
+ContinentData data = await Covid19Tracker.GetContinentsDataAsync(string contient);
 ```
 
-> Country code example: "IT" for Italy
+> continent name can be: "Asia", "North America", "South America", Europe", "Africa", "Australia/Oceania"
 
--  Get latest related to a specific country based on the country name.
+-  Gets all Countries Totals
 
 ```csharp
-Latest latest = await Covid19Tracker.GetLatestAboutCountryByNameAsync(string countryName);
+List<CountryData> data = await Covid19Tracker.GetCountriesDataAsync();
 ```
 
--  Gets the Coordinates(Longitude and Latitude), the latest data about the country and the last updated date based on the country name.
+-  Get a Specific Country's Totals for Actual
 
 ```csharp
-Location location = await Covid19Tracker.GetLocationWithDataByNameAsync(string countryName);
-
-// Output
-Console.WriteLine("Country: " + location.Country);
-Console.WriteLine("Longitude: " + location.Longitude);
-Console.WriteLine("Latitude: " + location.Latitude.);
-Console.WriteLine("Confirmed: " + location.Latest.Confirmed);
-Console.WriteLine("Deaths: " + location.Latest.Deaths);
-Console.WriteLine("Last updated  Date: " + location.LastUpdated);
+CountryData data = await Covid19Tracker.GetCountriesDataAsync(string country);
 ```
 
 > Country name example: "Italy"
 
-- Get Data from of all locations in the world (Latest + Locations).
+- Classes
 
 ```csharp
-CoronavirusOutbreakData data = await Covid19Tracker.GetTheWorldCovid19Data();
-```
-
-- Get all countries data.
-
-```csharp
-List<Location> result = await Covid19Tracker.GetAllCountriesDataAsync();
-```
-
-## Classes
-
-```csharp
-public class Latest
+public class WorlData
 {
-    // Gets or sets the total of confirmed cases.
-    public long Confirmed { get; set; }
-    
-    // Gets or sets the total of deaths.
+    // Gets or sets the Updated.
+    public DateTime Updated { get; set; }
+
+    // Gets or sets the Cases.
+    public long Cases { get; set; }
+
+    // Gets or sets the TodayCases.
+    public long TodayCases { get; set; }
+
+    // Gets or sets the Deaths.
     public long Deaths { get; set; }
+
+    // Gets or sets the TodayDeaths.
+    public long TodayDeaths { get; set; }
+
+    // Gets or sets the Recovered.
+    public long Recovered { get; set; }
+
+    // Gets or sets the Active.
+    public long Active { get; set; }
+
+    // Gets or sets the Critical.
+    public long Critical { get; set; }
+
+    // Gets or Sets Population.
+    public long Population { get; set; }
+
+    // Gets or sets the Tests.
+    public long Tests { get; set; }
+
+    // Gets or sets the AffectedCountries.
+    public int AffectedCountries { get; set; }      
 }
 ```
 
 ```csharp
-public class Location
+public class ContientData
 {
-    // Gets or sets the coordinates.
-    public Coordinates Coordinates { get; set; }
-    
-    // Gets or sets the country name.
-    public string Country { get; set; }
-    
-    // Gets or sets the country Code.
-    public string CountryCode { get; set; }
-    
-    // Gets or sets the last updated date.
-    public DateTime LastUpdated { get; set; }
-    
-    // Gets or sets the latest data about the location.
-    
-    // Gets or sets the province.
-    public string Province { get; set; }
+    // Gets or sets the updated.
+    public DateTime Updated { get; set; }
+
+    // Gets or sets the cases.
+    public long Cases { get; set; }
+
+    // Gets or sets the todayCases.
+    public long TodayCases { get; set; }
+
+    // Gets or sets the deaths.
+    public long Deaths { get; set; }
+
+    // Gets or sets the todayDeaths.
+    public long DodayDeaths { get; set; }
+
+    // Gets or sets the recovered.
+    public long Recovered { get; set; }
+
+    // Gets or sets the active.
+    public long Active { get; set; }
+
+    // Gets or sets the critical.
+    public long Critical { get; set; }
+
+    // Gets or sets the continent.
+    public string ContinentName { get; set; }
+       
+    // Gets or Sets Population.
+    public long Population { get; set; }
+
+    // Gets or sets the countries.
+    public IList<string> Countries { get; set; }
 }
 ```
 
 ```csharp
-public class CoronavirusOutbreakData
+public class ContientData
 {
-    // Gets or sets the Latest.
-    public Latest Latest { get; set; }
+    // Gets or sets the updated.
+    public DateTime Updated { get; set; }
+
+    // Gets or sets the cases.
+    public long Cases { get; set; }
+
+    // Gets or sets the todayCases.
+    public long TodayCases { get; set; }
+
+    // Gets or sets the deaths.
+    public long Deaths { get; set; }
+
+    // Gets or sets the todayDeaths.
+    public long DodayDeaths { get; set; }
+
+    // Gets or sets the recovered.
+    public long Recovered { get; set; }
+
+    // Gets or sets the active.
+    public long Active { get; set; }
+
+    // Gets or sets the critical.
+    public long Critical { get; set; }
+       
+    // Gets or Sets Population.
+    public long Population { get; set; }
+
+    // Gets or sets Tests.
+    public long Tests { get; set; }
     
-    // Gets or sets the Locations.
-    public List<Location> Locations { get; set; }
+    // Gets or sets the continent.
+    public string Continent { get; set; }
 }
 ```
 
