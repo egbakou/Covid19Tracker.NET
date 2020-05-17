@@ -13,7 +13,7 @@ Add namespace Covid19Tracker.Services and call Covid19TrackerAPI class to access
 👉 Gets global stats: cases, deaths, recovered, time last updated, and active cases. Data is updated every 10 minutes.
 
 ```csharp
-WorlData data = await Covid19Tracker.GetLatestAsync();
+WorlData data = await Covid19Tracker.GetWorlDataAsync();
 ```
 
 👉  Gets All Continent's Totals
@@ -25,7 +25,7 @@ List<ContinentData> data = await Covid19Tracker.GetContinentsDataAsync();
 👉 Gets a Specific Continent Totals.
 
 ```csharp
-ContinentData data = await Covid19Tracker.GetContinentsDataAsync(string contient);
+ContinentData data = await Covid19Tracker.GetDataByContinentAsync(string contient);
 ```
 
 > continent name can be: "Asia", "North America", "South America", Europe", "Africa", "Australia/Oceania"
@@ -39,7 +39,7 @@ List<CountryData> data = await Covid19Tracker.GetCountriesDataAsync();
 👉  Get a Specific Country's Totals for Actual
 
 ```csharp
-CountryData data = await Covid19Tracker.GetCountriesDataAsync(string country);
+CountryData data = await Covid19Tracker.GetDataByCountryAsync(string country);
 ```
 
 > Country name example: "Italy"
