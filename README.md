@@ -1,6 +1,6 @@
 
 
-# <img src="art/icon.png" alt="Icon" width="60" />Covid19Tracker.NET  v2.0
+# <img src="art/icon.png" alt="Icon" width="60" />Covid19Tracker.NET  v2.1
 
 This is a .NET wrapper library around the API provided by [@NovelCovid](https://github.com/NovelCovid/) https://github.com/NovelCovid/API for tracking the global coronavirus (COVID-19, SARS-CoV-2) outbreak. 
 
