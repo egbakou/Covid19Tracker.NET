@@ -12,7 +12,7 @@
     <PackageIconUrl>https://raw.githubusercontent.com/egbakou/logos/master/Covid19Tracker.NET/covid-19_4.png?raw=true</PackageIconUrl>
     <Version>2.0</Version>
     <PackageReleaseNotes>See: https://github.com/egbakou/Covid19Tracker.NET </PackageReleaseNotes>
-    <PackageTags> dotnet-standard, covid19-data, covid-19,covid-api, nuget-package
+    <PackageTags> dotnet-standard, covid19-tracker covid19-data, covid-19,covid-api, nuget-package
     </PackageTags>
     <Copyright>Copyright 2020</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
