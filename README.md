@@ -1,16 +1,16 @@
 
 
-# <img src="art/icon.png" alt="Icon" width="60" />Covid19Tracker.NET  V2.0
+# <img src="art/icon.png" alt="Icon" width="60" />Covid19Tracker.NET  v2.0
 
 This is a .NET wrapper library around the API provided by [@NovelCovid](https://github.com/NovelCovid/) https://github.com/NovelCovid/API for tracking the global coronavirus (COVID-19, SARS-CoV-2) outbreak. 
 
-It provides up-to-date data about Coronavirus outbreak includes numbers about confirmed cases, recovered, deaths, today cases, today deaths, tests and more.
+It provides up-to-date data about Coronavirus outbreak includes confirmed cases, recovered, deaths, active, today cases, today deaths, tests and more.
 
 The version 1.0.0 doc is located [here](https://github.com/egbakou/Covid19Tracker.NET/blob/master/Docs/V1.0.0README.md).
 
 ## Setup
 
-- Available on NuGet: https://www.nuget.org/packages/Covid19Tracker.NET/ [![NuGet](https://img.shields.io/nuget/v/Covid19Tracker.NET.svg?label=NuGet)](https://www.nuget.org/packages/Covid19Tracker.NET/) ![NuGet](https://img.shields.io/nuget/dt/Covid19Tracker.NET.svg)
+- Available on NuGet: https://www.nuget.org/packages/Covid19Tracker.NET/ [![NuGet](https://img.shields.io/nuget/v/Covid19Tracker.NET.svg?label=NuGet)](https://www.nuget.org/packages/Covid19Tracker.NET/)
 - Install into your .NET project(.NET Standard, .NET Core, Xamarin, etc).
 
 ## Note
@@ -19,10 +19,10 @@ Add `namespace` `Covid19Tracker.Services` and call `Covid19TrackerAPI` class to 
 
 ## Usage
 
-- Gets global stats: cases, deaths, recovered, time last updated, and active cases. Data is updated every 10 minutes.
+- Gets global stats. Data is updated every 10 minutes.
 
 ```csharp
-WorlData data = await Covid19Tracker.GetLatestAsync();
+WorlData data = await Covid19Tracker.GetWorlDataAsync();
 ```
 
 -  Gets All Continent's Totals
@@ -34,10 +34,10 @@ List<ContinentData> data = await Covid19Tracker.GetContinentsDataAsync();
 - Gets a Specific Continent Totals.
 
 ```csharp
-ContinentData data = await Covid19Tracker.GetContinentsDataAsync(string contient);
+ContinentData data = await Covid19Tracker.GetDataByContinentAsync(string contient);
 ```
 
-> continent name can be: "Asia", "North America", "South America", Europe", "Africa", "Australia/Oceania"
+> Continent name: "Asia", "North America", "South America", Europe", "Africa", "Australia/Oceania"
 
 -  Gets all Countries Totals
 
@@ -48,7 +48,7 @@ List<CountryData> data = await Covid19Tracker.GetCountriesDataAsync();
 -  Get a Specific Country's Totals for Actual
 
 ```csharp
-CountryData data = await Covid19Tracker.GetCountriesDataAsync(string country);
+CountryData data = await Covid19Tracker.GetDataByCountryAsync(string country);
 ```
 
 > Country name example: "Italy"
@@ -125,6 +125,9 @@ public class ContientData
        
     // Gets or Sets Population.
     public long Population { get; set; }
+    
+    // Gets or sets the Tests.
+    public long Tests { get; set; }
 
     // Gets or sets the countries.
     public IList<string> Countries { get; set; }
