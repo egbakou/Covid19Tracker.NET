@@ -4,13 +4,13 @@
 
 This is a .NET wrapper library around the API provided by [@NovelCovid](https://github.com/NovelCovid/) https://github.com/NovelCovid/API for tracking the global coronavirus (COVID-19, SARS-CoV-2) outbreak. 
 
-It provides up-to-date data about Coronavirus outbreak includes confirmed cases, recovered, deaths, active, today cases, today deaths, tests and more.
+It provides up-to-date data about Coronavirus outbreak includes confirmed cases, recovered, deaths, active, today cases, today deaths, tests and more.![](https://github.com/egbakou/Covid19Tracker.NET/workflows/CI/badge.svg)[![NuGet](https://img.shields.io/nuget/v/Covid19Tracker.NET.svg?label=NuGet)](https://www.nuget.org/packages/Covid19Tracker.NET/)
 
 The version 1.0.0 doc is located [here](https://github.com/egbakou/Covid19Tracker.NET/blob/master/Docs/V1.0.0README.md).
 
 ## Setup
 
-- Available on NuGet: https://www.nuget.org/packages/Covid19Tracker.NET/ [![NuGet](https://img.shields.io/nuget/v/Covid19Tracker.NET.svg?label=NuGet)](https://www.nuget.org/packages/Covid19Tracker.NET/)
+- Available on NuGet: https://www.nuget.org/packages/Covid19Tracker.NET/ 
 - Install into your .NET project(.NET Standard, .NET Core, Xamarin, etc).
 
 ## Note
