@@ -1,7 +1,6 @@
 ﻿/*
 Covid19TrackerAPI.cs
 15/05/2020 00:50:48
-Kodjo Laurent Egbakou
 */
 
 using Covid19Tracker.Models;
