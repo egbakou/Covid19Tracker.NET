@@ -39,43 +39,43 @@ namespace Covid19TrackerModels
         /// Gets or sets the Cases.
         /// </summary>
         [JsonProperty("cases")]
-        public int Cases { get; set; }
+        public long Cases { get; set; }
 
         /// <summary>
         /// Gets or sets the TodayCases.
         /// </summary>
         [JsonProperty("todayCases")]
-        public int TodayCases { get; set; }
+        public long TodayCases { get; set; }
 
         /// <summary>
         /// Gets or sets the Deaths.
         /// </summary>
         [JsonProperty("deaths")]
-        public int Deaths { get; set; }
+        public long Deaths { get; set; }
 
         /// <summary>
         /// Gets or sets the TodayDeaths.
         /// </summary>
         [JsonProperty("todayDeaths")]
-        public int TodayDeaths { get; set; }
+        public long TodayDeaths { get; set; }
 
         /// <summary>
         /// Gets or sets the Recovered.
         /// </summary>
         [JsonProperty("recovered")]
-        public int Recovered { get; set; }
+        public long Recovered { get; set; }
 
         /// <summary>
         /// Gets or sets the Active.
         /// </summary>
         [JsonProperty("active")]
-        public int Active { get; set; }
+        public long Active { get; set; }
 
         /// <summary>
         /// Gets or sets the Critical.
         /// </summary>
         [JsonProperty("critical")]
-        public int Critical { get; set; }
+        public long Critical { get; set; }
 
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Covid19TrackerModels
         /// Gets or sets the Tests.
         /// </summary>
         [JsonProperty("tests")]
-        public int Tests { get; set; }
+        public long Tests { get; set; }
 
 
         /// <summary>

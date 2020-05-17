@@ -27,43 +27,43 @@ namespace Covid19Tracker.Models
         /// Gets or sets the cases.
         /// </summary>
         [JsonProperty("cases")]
-        public int Cases { get; set; }
+        public long Cases { get; set; }
 
         /// <summary>
         /// Gets or sets the todayCases.
         /// </summary>
         [JsonProperty("todayCases")]
-        public int TodayCases { get; set; }
+        public long TodayCases { get; set; }
 
         /// <summary>
         /// Gets or sets the deaths.
         /// </summary>
         [JsonProperty("deaths")]
-        public int deaths { get; set; }
+        public long Deaths { get; set; }
 
         /// <summary>
         /// Gets or sets the todayDeaths.
         /// </summary>
         [JsonProperty("todayDeaths")]
-        public int DodayDeaths { get; set; }
+        public long DodayDeaths { get; set; }
 
         /// <summary>
         /// Gets or sets the recovered.
         /// </summary>
         [JsonProperty("recovered")]
-        public int Recovered { get; set; }
+        public long Recovered { get; set; }
 
         /// <summary>
         /// Gets or sets the active.
         /// </summary>
         [JsonProperty("active")]
-        public int Active { get; set; }
+        public long Active { get; set; }
 
         /// <summary>
         /// Gets or sets the critical.
         /// </summary>
         [JsonProperty("critical")]
-        public int Critical { get; set; }
+        public long Critical { get; set; }
 
         /// <summary>
         /// Gets or sets the continent.
