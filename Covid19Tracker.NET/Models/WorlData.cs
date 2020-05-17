@@ -1,10 +1,4 @@
-﻿/*
-WorlData.cs
-14/05/2020 23:45:33
-Kodjo Laurent Egbakou
-*/
-
-using Covid19Tracker.Helpers;
+﻿using Covid19Tracker.Helpers;
 using Newtonsoft.Json;
 using System;
 

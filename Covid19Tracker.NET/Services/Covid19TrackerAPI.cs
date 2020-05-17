@@ -1,9 +1,4 @@
-﻿/*
-Covid19TrackerAPI.cs
-15/05/2020 00:50:48
-*/
-
-using Covid19Tracker.Models;
+﻿using Covid19Tracker.Models;
 using Covid19TrackerModels;
 using Newtonsoft.Json.Linq;
 using RestSharp;

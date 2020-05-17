@@ -1,10 +1,4 @@
-﻿/*
-CountryData.cs
-14/05/2020 22:59:07
-Kodjo Laurent Egbakou
-*/
-
-using Covid19Tracker.Helpers;
+﻿using Covid19Tracker.Helpers;
 using Covid19Tracker.Models;
 using Newtonsoft.Json;
 using System;

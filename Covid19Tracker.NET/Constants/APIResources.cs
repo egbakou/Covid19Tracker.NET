@@ -1,9 +1,4 @@
-﻿/*
-APIResources.cs
-14/05/2020 23:18:45
-*/
-
-namespace Covid19Tracker.Constants
+﻿namespace Covid19Tracker.Constants
 {
     /// <summary>
     /// Defines the <see cref="APIResources" />.

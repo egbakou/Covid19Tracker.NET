@@ -1,10 +1,4 @@
-﻿/*
-CountryInfo.cs
-14/05/2020 22:54:40
-Kodjo Laurent Egbakou
-*/
-
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace Covid19Tracker.Models
 {
