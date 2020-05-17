@@ -71,6 +71,14 @@ namespace Covid19Tracker.Models
         [JsonProperty("continent")]
         public string ContinentName { get; set; }
 
+       
+        /// <summary>
+        /// Gets or Sets Population.
+        /// </summary>
+        [JsonProperty("population")]
+        public long Population { get; set; }
+
+
         /// <summary>
         /// Gets or sets the countries.
         /// </summary>

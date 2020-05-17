@@ -77,17 +77,12 @@ namespace Covid19TrackerModels
         [JsonProperty("critical")]
         public int Critical { get; set; }
 
-        /// <summary>
-        /// Gets or sets the CasesPerOneMillion.
-        /// </summary>
-        [JsonProperty("casesPerOneMillion")]
-        public int CasesPerOneMillion { get; set; }
 
         /// <summary>
-        /// Gets or sets the DeathsPerOneMillion.
+        /// Gets or Sets Population.
         /// </summary>
-        [JsonProperty("deathsPerOneMillion")]
-        public int DeathsPerOneMillion { get; set; }
+        [JsonProperty("population")]
+        public long Population { get; set; }
 
         /// <summary>
         /// Gets or sets the Tests.
@@ -95,11 +90,6 @@ namespace Covid19TrackerModels
         [JsonProperty("tests")]
         public int Tests { get; set; }
 
-        /// <summary>
-        /// Gets or sets the TestsPerOneMillion.
-        /// </summary>
-        [JsonProperty("testsPerOneMillion")]
-        public int TestsPerOneMillion { get; set; }
 
         /// <summary>
         /// Gets or sets the Continent.
