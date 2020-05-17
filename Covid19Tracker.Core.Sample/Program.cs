@@ -10,21 +10,21 @@ namespace Covid19Tracker.Core.Sample
         static async Task Main(string[] args)
         {
 
-            //var result1 = await GetContinentsDataAsync();
-            //Console.WriteLine(result1.Count);
-            //Console.ReadLine();
+            var result1 = await GetContinentsDataAsync();
+            Console.WriteLine(result1.Count);
+            Console.ReadLine();
 
-            //var result2 = await GetDataByContinentAsync("africa");
-            //Console.WriteLine(result2.Cases);
-            //Console.ReadLine();
-
-
-            //var result3 = await GetCountriesDataAsync();
-            //Console.WriteLine(result3.Count);
-            //Console.ReadLine();
+            var result2 = await GetDataByContinentAsync("europe");
+            Console.WriteLine(result2.Cases);
+            Console.ReadLine();
 
 
-            var result4 = await GetDataByCountryAsync("togo");
+            var result3 = await GetCountriesDataAsync();
+            Console.WriteLine(result3.Count);
+            Console.ReadLine();
+
+
+            var result4 = await GetDataByCountryAsync("italy");
             Console.WriteLine(result4.Cases);
             Console.ReadLine();
 
