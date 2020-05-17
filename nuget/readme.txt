@@ -5,12 +5,14 @@ Find the latest at: https://github.com/egbakou/Covid19Tracker.NET
 
 ## Note
 
-Add namespace Covid19Tracker.Services and call Covid19TrackerAPI class to access to all methods.
+Add namespace Covid19Tracker.Services and call
+Covid19TrackerAPI class to access to all methods.
 
 
 ## Usage
 
-👉 Gets global stats: cases, deaths, recovered, time last updated, and active cases. Data is updated every 10 minutes.
+👉 Gets global stats: cases, deaths, recovered,
+time last updated, and active cases. Data is updated every 10 minutes.
 
 ```csharp
 WorlData data = await Covid19Tracker.GetWorlDataAsync();
