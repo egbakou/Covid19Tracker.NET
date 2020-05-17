@@ -6,7 +6,7 @@ This is a .NET wrapper library around the API provided by [@NovelCovid](https://
 
 It provides up-to-date data about Coronavirus outbreak includes numbers about confirmed cases, recovered, deaths, today cases, today deaths, tests and more.
 
-The version 1.0.0 doc is [here](https://github.com/egbakou/Covid19Tracker.NET/blob/master/Docs/V1.0.0README.md)
+The version 1.0.0 doc is located [here](https://github.com/egbakou/Covid19Tracker.NET/blob/master/Docs/V1.0.0README.md).
 
 ## Setup
 
