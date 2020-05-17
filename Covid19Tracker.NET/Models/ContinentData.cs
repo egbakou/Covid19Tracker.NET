@@ -78,6 +78,11 @@ namespace Covid19Tracker.Models
         [JsonProperty("population")]
         public long Population { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Tests.
+        /// </summary>
+        [JsonProperty("tests")]
+        public long Tests { get; set; }
 
         /// <summary>
         /// Gets or sets the countries.
