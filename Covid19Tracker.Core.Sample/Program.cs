@@ -19,14 +19,14 @@ namespace Covid19Tracker.Core.Sample
             //Console.ReadLine();
 
 
-            var result3 = await GetCountriesDataAsync();
-            Console.WriteLine(result3.Count);
-            Console.ReadLine();
-
-
-            //var result4 = await GetDataByCountryAsync("togo");
-            //Console.WriteLine(result4.Cases);
+            //var result3 = await GetCountriesDataAsync();
+            //Console.WriteLine(result3.Count);
             //Console.ReadLine();
+
+
+            var result4 = await GetDataByCountryAsync("togo");
+            Console.WriteLine(result4.Cases);
+            Console.ReadLine();
 
 
         }
