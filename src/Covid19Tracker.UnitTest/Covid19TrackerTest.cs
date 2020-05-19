@@ -7,9 +7,9 @@ namespace Covid19Tracker.UnitTest
     public class Covid19TrackerTest
     {
         [Fact]
-        public async void TestGetWorlDataAsync()
+        public async void TestGetGlobalDataAsync()
         {
-            var data = await GetWorlDataAsync();
+            var data = await GetGlobalDataAsync();
             Assert.NotNull(data);
         }
 

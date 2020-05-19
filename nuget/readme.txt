@@ -15,7 +15,7 @@ Covid19TrackerAPI class to access to all methods.
 time last updated, and active cases. Data is updated every 10 minutes.
 
 ```csharp
-WorlData data = await Covid19Tracker.GetWorlDataAsync();
+GlobalData data = await Covid19Tracker.GetGlobalDataAsync();
 ```
 
 👉  Gets All Continent's Totals
