@@ -22,7 +22,7 @@ Add `namespace` `Covid19Tracker.Services` and call `Covid19TrackerAPI` class to 
 - Gets global stats. Data is updated every 10 minutes.
 
 ```csharp
-WorlData data = await Covid19Tracker.GetWorlDataAsync();
+GlobalData data = await Covid19Tracker.GetGlobalDataAsync();
 ```
 
 -  Gets All Continent's Totals
@@ -56,7 +56,7 @@ CountryData data = await Covid19Tracker.GetDataByCountryAsync(string country);
 - Classes
 
 ```csharp
-public class WorlData
+public class GlobalData
 {
     // Gets or sets the Updated.
     public DateTime Updated { get; set; }

@@ -5,9 +5,9 @@ using System;
 namespace Covid19Tracker.Models
 {
     /// <summary>
-    /// Defines the <see cref="WorlData" />.
+    /// Defines the <see cref="GlobalData" />.
     /// </summary>
-    public class WorlData
+    public class GlobalData
     {
         /// <summary>
         /// Gets or sets the Updated.
