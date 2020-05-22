@@ -1,0 +1,28 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "egbakou",
+      "name": "Kodjo Laurent Egbakou",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/26142591?v=4",
+      "profile": "https://lioncoding.com",
+      "contributions": [
+        "code",
+        "test",
+        "doc",
+        "infra",
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Covid19Tracker.NET",
+  "projectOwner": "egbakou",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
