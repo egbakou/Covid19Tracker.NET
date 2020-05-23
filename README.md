@@ -1,6 +1,6 @@
 # <img src="art/icon.png" alt="Icon" width="60" />Covid19Tracker.NET  v2.0.2
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This is a .NET wrapper library around the API provided by [@NovelCovid](https://github.com/NovelCovid/) https://github.com/NovelCovid/API for tracking the global coronavirus (COVID-19, SARS-CoV-2) outbreak. 
@@ -197,6 +197,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://pufler.dev"><img src="https://avatars0.githubusercontent.com/u/17516174?v=4" width="100px;" alt=""/><br /><sub><b>puf17640</b></sub></a><br /><a href="https://github.com/egbakou/Covid19Tracker.NET/commits?author=puf17640" title="Code">💻</a> <a href="https://github.com/egbakou/Covid19Tracker.NET/commits?author=puf17640" title="Tests">⚠️</a> <a href="https://github.com/egbakou/Covid19Tracker.NET/commits?author=puf17640" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://lioncoding.com"><img src="https://avatars0.githubusercontent.com/u/26142591?v=4" width="100px;" alt=""/><br /><sub><b>Kodjo Laurent Egbakou</b></sub></a><br /><a href="https://github.com/egbakou/Covid19Tracker.NET/commits?author=egbakou" title="Code">💻</a> <a href="https://github.com/egbakou/Covid19Tracker.NET/commits?author=egbakou" title="Tests">⚠️</a> <a href="https://github.com/egbakou/Covid19Tracker.NET/commits?author=egbakou" title="Documentation">📖</a> <a href="#infra-egbakou" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-egbakou" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 
