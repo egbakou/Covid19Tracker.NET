@@ -138,7 +138,7 @@ public class ContientData
 ```
 
 ```csharp
-public class ContientData
+public class CountryData
 {
     // Gets or sets the updated.
     public DateTime Updated { get; set; }
